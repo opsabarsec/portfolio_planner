@@ -4,17 +4,18 @@
 Rank candidate portfolio projects using European market demand rather than personal interest alone.
 
 ## Scoring dimensions
-- Market demand (0-5)
-- European relevance (0-5)
+- Market impact (0-5)
+- European hiring relevance (0-5)
+- Freelance demand signal (0-5)
+- GitHub momentum alignment (0-5)
 - Technical depth (0-5)
 - Demo clarity (0-5)
 - Differentiation (0-5)
 - Build time under 2 weeks (0-5)
-- Content leverage for LinkedIn/GitHub/blog/video (0-5)
 
 ## Decision rule
-Prioritize ideas scoring high on:
-- market demand + European relevance + demo clarity
+Prioritize portfolio opportunities scoring high on:
+- market impact + hiring relevance + freelance demand + GitHub momentum alignment + demo clarity
 
 ## Example outputs
 - EU-compliant agent evaluation dashboard

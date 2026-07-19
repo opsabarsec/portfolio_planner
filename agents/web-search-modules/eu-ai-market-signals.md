@@ -1,9 +1,27 @@
-# Stack Overflow Module
+# EU AI Market Signals Module
 
-> 从 web-search-agent.md 提取的技术问答专用策略
+## Goal
+Identify where market impact, urgency, and adoption are moving in the European AI economy.
 
-**触发场景**: 编程问答、代码实现、API用法
+## Search focus
+- AI funding rounds in Europe
+- Enterprise AI adoption by sector
+- Generative AI procurement trends
+- Sovereign AI and European infrastructure
+- Demand for vertical AI in industry, health, finance, logistics, and public sector
 
-## 搜索源
-- **Stack Overflow** and other Stack Exchange sites - technical Q&A
-- **Technical forums** and discussion boards - community wisdom
+## Priority sectors
+- Manufacturing
+- Logistics and supply chain
+- Financial services
+- Cybersecurity
+- Health and medtech
+- Public administration
+- Climate and energy
+
+## Output format
+- Trend
+- Geography
+- Buyer type
+- Market impact signal (spending, adoption, urgency)
+- Portfolio opportunity to address
