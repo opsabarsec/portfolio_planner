@@ -14,7 +14,7 @@ The `/portfolio-planner` skill helps you discover:
 All research is scoped to **  <LAST 6 MONTHS> only** (no stale data) and focuses on **European market** opportunities and rates.
 
 ## How It Works
-
+![flow_chart](/workflow.png "Workflow")
 ### One Command
 
 ```bash
