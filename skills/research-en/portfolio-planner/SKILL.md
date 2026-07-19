@@ -26,25 +26,55 @@ Research the current freelance and hiring market for AI engineers and generate a
 ### Phase 2: Parallel Research (3 Background web-search-agent Tasks)
 
 - Keep the three-agent layout as-is.
-- Replace references like “current freelance AI market landscape” with “current freelance and hiring market landscape” where appropriate, to reflect that `web-search-agent` now also routes to hiring and general market modules.
-- Ensure the hard constraint block explicitly mentions that each agent must load `freelance-market.md` before searching.
+- Frame research tasks around the web-search-agent's core evidence layers: market impact, hiring demand, freelance demand, GitHub momentum, and portfolio opportunity.
+- Each task should load the appropriate module (`freelance-market.md`, `eu-ai-market-signals.md`, `github-ai-trends.md`) before searching.
+- Ensure synthesis pulls together findings using consistent vocabulary: **market impact** (commercial signals), **GitHub momentum** (open-source trends), **hiring demand** (recruiter signals), **freelance demand** (client pain points), **portfolio opportunity** (actionable projects).
 
-### Phase 3 & 4: Synthesis and Report
+### Phase 3 & 4: Synthesis and Dual Output
 
-- The report already focuses on:
-  - One primary portfolio project
-  - Top certifications
-  - Quick-win skills
-  - Implementation timeline
+Generate two complementary documents:
 
-That structure is fully compatible with the updated `web-search-agent` persona and modules; no structural change is necessary. You can optionally add a one-line note in the Executive Summary section template:
+#### 3a. **Polished Final Report** (`portfolio-report-YYYY-MM-DD.md`)
+Focus on:
+- Executive summary with clear recommendation
+- One primary portfolio project
+- Top certifications
+- Quick-win skills
+- Implementation timeline
+- Actionable next steps
+
+Add a one-line note in the Executive Summary section template:
 
 ```md
 **Geography focus**: [If applicable, note whether findings are European-focused or global.]
+**Research date**: [Date of research completion]
 ```
 
-This keeps the skill compatible with both Europe-focused and broader searches.
+#### 3b. **Raw Research Archive** (`data/research_results_DD_MM_YYYY.md`)
+A NotebookLM-friendly archive containing:
+
+**Metadata block:**
+```md
+---
+date: DD-MM-YYYY
+scope: [user's selected timeframe, e.g., "Last 6 months"]
+geography: [Europe/Global/Specific region]
+focus_areas: [Build time, client type constraints]
+---
+```
+
+**Content structure:**
+- Executive summary (concise, non-polished)
+- **Market Signals** section with all findings, dates, and sources
+- **Hiring Demand** section with role/skill patterns
+- **GitHub Trends** section with repos, star counts, timestamps
+- **Freelance Demand** section with buyer pain points
+- **Ranked Opportunities** section with all project ideas and scoring
+- **Raw Source List** with full URLs and extraction dates
+- **Tags** for easy categorization: #github-trends, #freelance, #europe-jobs, #market-signals, etc.
+
+This archive becomes the "memory" for research agents in future runs—it captures the full evidence base without editorial filtering, making it suitable for NotebookLM ingestion and future reference.
 
 ---
 
-Overall, the portfolio planner skill is already very close to what your new `web-search-agent` plus `freelance-market.md` module expects: it drives three parallel, time-bounded, portfolio-oriented research tasks and then synthesizes into a narrative report. [page:29] The main improvement is to slightly widen the description and phrasing so it reflects both freelance and hiring demand, not only freelance, and to avoid hardcoding past timeframe labels.
+Overall, the portfolio planner skill drives three parallel, time-bounded, portfolio-oriented research tasks and then synthesizes into both a narrative report (for human action) and an evidence archive (for future AI research and memory). This dual output supports both immediate decision-making and long-term research continuity.

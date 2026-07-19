@@ -1,6 +1,6 @@
 # Portfolio Planner for Freelance AI Engineers
 
-A Claude Code skill that research the current freelance AI market and creates a personalized portfolio and upskilling strategy.
+A Claude Code skill that research the current European freelance AI market and creates a personalized portfolio and upskilling strategy.
 
 ## What It Does
 
@@ -8,10 +8,10 @@ The `/portfolio-planner` skill helps you discover:
 
 - **The best portfolio project to build** — aligned with current market trends, your technical stack, and what clients are actively hiring for
 - **In-demand skills & specializations** — what AI capabilities maximize your freelance mission acquisition
-- **Certification roadmap** — which credentials (if any) provide genuine ROI in the 2025-2026 freelance market
+- **Certification roadmap** — which credentials (if any) provide genuine ROI in the   <LAST 6 MONTHS> freelance market
 - **Quick wins** — skills to highlight immediately on your freelance profiles to attract clients
 
-All research is scoped to **2025-2026 only** (no stale data) and focuses on **European market** opportunities and rates.
+All research is scoped to **  <LAST 6 MONTHS> only** (no stale data) and focuses on **European market** opportunities and rates.
 
 ## How It Works
 
@@ -45,11 +45,29 @@ Three agents research simultaneously:
 
 ### Output
 
+The `/portfolio-planner` skill generates **two complementary outputs**:
+
+#### 1. Polished Final Report
+
 ```bash
 ./portfolio-plan/portfolio-report-{date}.md
 ```
 
-A markdown report ready to guide your next 3-6 months of portfolio and skill development.
+A concise, narrative markdown report ready to guide your next 3-6 months of portfolio and skill development. Includes executive summary, top recommendations, and implementation timeline.
+
+#### 2. Raw Research Archive (for NotebookLM & Agent Memory)
+
+```bash
+./data/research_results_DD_MM_YYYY.md
+```
+
+A comprehensive, evidence-based archive of all research findings, sources, and raw data. Designed for:
+
+- **Ingestion into NotebookLM** for deeper analysis and trend correlation
+- **Future research agent memory** — can be loaded in subsequent research runs to identify patterns, gaps, and confidence trends
+- **Long-term documentation** — preserves the full evidence base without editorial filtering
+
+See [research_results_TEMPLATE.md](data/research_results_TEMPLATE.md) for the expected structure.
 
 ## Installation
 
@@ -224,7 +242,7 @@ If `SAVE_REPORTS_TO_DATA=true` in `.env`, a copy is also saved to `./data/portfo
 
 ```markdown
 # Portfolio & Career Strategy Report
-Generated 2025-01-15
+Generated  01-15
 
 ## Executive Summary
 - Top recommended portfolio project
@@ -248,7 +266,7 @@ Generated 2025-01-15
 - What to do this month, next quarter, 6-month plan
 
 ## Sources
-All sources cited with publication dates (2025-2026 only)
+All sources cited with publication dates (  <LAST 6 MONTHS> only)
 ```
 
 ## Architecture
@@ -259,7 +277,7 @@ This skill is built on a modular web-search framework:
 - **Agent**: `web-search-agent.md` — performs web research with routing logic
 - **Modules**: `web-search-modules/freelance-market.md` — strategy for freelance market research
 
-The system enforces recency (2025-2026 sources only) and uses human-in-the-loop confirmations at each stage to keep research aligned with your goals.
+The system enforces recency (  <LAST 6 MONTHS> sources only) and uses human-in-the-loop confirmations at each stage to keep research aligned with your goals.
 
 ## For Developers
 
